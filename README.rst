@@ -1,7 +1,7 @@
 CapiDup CLI
 ===========
 
-|license| |Codacy Badge|
+|license| |PyPi version| |PyPi pyversion| |Codacy Badge|
 
 Quickly find duplicate files in directories.
 
@@ -109,6 +109,9 @@ there.
 
 .. |license| image:: https://img.shields.io/badge/license-GPLv3+-blue.svg?maxAge=2592000
    :target: LICENSE
+.. |PyPi version| image:: https://img.shields.io/pypi/v/capidup-cli.svg
+   :target: https://pypi.python.org/pypi/capidup-cli
+.. |PyPi pyversion| image:: https://img.shields.io/pypi/pyversions/capidup-cli.svg?maxAge=86400
 .. |Codacy Badge| image:: https://api.codacy.com/project/badge/Grade/7c0bc6264ca141f49fefe28609c6f6fe
    :target: https://www.codacy.com/app/israel-lugo/capidup-cli
 
