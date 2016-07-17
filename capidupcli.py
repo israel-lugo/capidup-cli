@@ -51,7 +51,7 @@ import argparse
 import capidup.finddups as finddups
 
 
-__version__ = "1.0.0.dev1"
+__version__ = "1.0.0"
 
 
 __all__ = [ 'main' ]
