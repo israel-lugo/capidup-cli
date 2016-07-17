@@ -84,8 +84,7 @@ def main():
 
     args = parse_args()
 
-    had_errors = False
-    duplicate_files_list, had_errors = finddups.find_duplicates_in_dirs(args.directories)
+    duplicate_files_list, errors = finddups.find_duplicates_in_dirs(args.directories)
 
     # sort the list of lists of duplicate files, so files in the same
     # directory show up near each other, instead of randomly scattered
@@ -97,7 +96,9 @@ def main():
 
         print('-' * 30)
 
-    if had_errors:
+    if errors:
+        # XXX: Should we print the error strings again, so they are all
+        # together in one place?
         sys.stderr.write("error: some files could not be compared\n")
         sys.exit(1)
 
