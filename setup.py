@@ -1,5 +1,5 @@
 
-"""Package information for capidup."""
+"""Package information for capidup-cli."""
 
 import os.path
 import io
@@ -48,23 +48,28 @@ setup(
     description='Quickly find duplicate files in directories (CLI utility)',
     author="Israel G. Lugo",
     author_email='israel.lugo@lugosys.com',
+    url='https://github.com/israel-lugo/capidup-cli',
     version=find_version([ "capidupcli.py" ]),
     py_modules=[ 'capidupcli' ],
     install_requires=[ 'capidup>=1,<2' ],
     entry_points={
         'console_scripts': [ 'capidup=capidupcli:main' ],
     },
-    license='License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
-    long_description="""
-CapiDup recursively crawls through all the files in a list of directories and
-identifies duplicate files. Duplicate files are files with the exact same
-content, regardless of their name, location or timestamp.
-
-This program is designed to be quite fast. It uses a smart algorithm to detect
-and group duplicate files using a single pass on each file (that is, CapiDup
-doesn't need to compare each file to every other).
-
-capidup-cli is the command-line utility. It depends on the capidup library
-package, which actually implements the functionality.
-"""
+    license='GPLv3+',
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Topic :: System :: Filesystems',
+        'Topic :: Utilities',
+    ],
+    long_description=read([ "README.rst" ])
 )
