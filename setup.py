@@ -50,7 +50,7 @@ setup(
     author_email='israel.lugo@lugosys.com',
     version=find_version([ "capidupcli.py" ]),
     py_modules=[ 'capidupcli' ],
-    install_requires=[ 'capidup' ],
+    install_requires=[ 'capidup>=1,<2' ],
     entry_points={
         'console_scripts': [ 'capidup=capidupcli:main' ],
     },
