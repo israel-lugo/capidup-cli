@@ -66,6 +66,9 @@ def parse_args():
     parser = argparse.ArgumentParser(
             description="Quickly find duplicate files in directories.")
 
+    parser.add_argument('-L', '--follow-dirlinks', action='store_true',
+                        help="follow symlinks to directories while crawling")
+
     parser.add_argument('directories', nargs='+', metavar='directory', help="where to scan for duplicates")
 
     # This doesn't show license information, a la GNU. Would be nice.
@@ -84,7 +87,8 @@ def main():
 
     args = parse_args()
 
-    duplicate_files_list, errors = finddups.find_duplicates_in_dirs(args.directories)
+    duplicate_files_list, errors = finddups.find_duplicates_in_dirs(args.directories,
+            follow_dirlinks=args.follow_dirlinks)
 
     # sort the list of lists of duplicate files, so files in the same
     # directory show up near each other, instead of randomly scattered

@@ -51,7 +51,7 @@ setup(
     url='https://github.com/israel-lugo/capidup-cli',
     version=find_version([ "capidupcli.py" ]),
     py_modules=[ 'capidupcli' ],
-    install_requires=[ 'capidup>=1,<2' ],
+    install_requires=[ 'capidup>=1.1,<2' ],
     entry_points={
         'console_scripts': [ 'capidup=capidupcli:main' ],
     },
