@@ -103,7 +103,7 @@ def main():
     if errors:
         # XXX: Should we print the error strings again, so they are all
         # together in one place?
-        sys.stderr.write("error: some files could not be compared\n")
+        sys.stderr.write("error: some files/directories could not be compared/indexed (see previous errors)\n")
         sys.exit(1)
 
 
